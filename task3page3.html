@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Schedule</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+        color: white;
+      }
+
+      /* Navbar */
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px;
+
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(15px);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #38bdf8;
+      }
+
+      .logo::before {
+        content: "📅 ";
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: #38bdf8;
+      }
+
+      /* Main Content */
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 60px 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 40px;
+
+        background: linear-gradient(to right, #38bdf8, #8b5cf6, #ec4899);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Table */
+
+      .schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(20px);
+
+        border-radius: 20px;
+        overflow: hidden;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      }
+
+      .schedule-table th {
+        background: rgba(56, 189, 248, 0.2);
+        color: #38bdf8;
+
+        padding: 20px;
+        font-size: 1.1rem;
+      }
+
+      .schedule-table td {
+        padding: 18px;
+        text-align: center;
+        color: #e2e8f0;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+        transition: 0.3s;
+      }
+
+      .schedule-table tr:hover td {
+        background: rgba(56, 189, 248, 0.1);
+        color: #38bdf8;
+      }
+
+      .schedule-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* Badge Styles */
+
+      .online {
+        background: #22c55e;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+
+      .offline {
+        background: #f97316;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+
+      /* Responsive */
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          gap: 15px;
+          padding: 20px;
+        }
+
+        .nav-links {
+          gap: 15px;
+        }
+
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .schedule-table {
+          font-size: 14px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">SkillForge Academy</div>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="#" class="active">Schedule</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Course Schedule</h1>
+
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Trainer</th>
+            <th>Duration</th>
+            <th>Mode</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>HTML & CSS</td>
+            <td>Ashoka</td>
+            <td>2 Weeks</td>
+            <td><span class="online">Online</span></td>
+          </tr>
+
+          <tr>
+            <td>Java</td>
+            <td>Rahul</td>
+            <td>4 Weeks</td>
+            <td><span class="offline">Offline</span></td>
+          </tr>
+
+          <tr>
+            <td>React JS</td>
+            <td>Anita</td>
+            <td>3 Weeks</td>
+            <td><span class="online">Online</span></td>
+          </tr>
+
+          <tr>
+            <td>Python</td>
+            <td>Kiran</td>
+            <td>5 Weeks</td>
+            <td><span class="offline">Offline</span></td>
+          </tr>
+
+          <tr>
+            <td>Node.js</td>
+            <td>Vikram</td>
+            <td>4 Weeks</td>
+            <td><span class="online">Online</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

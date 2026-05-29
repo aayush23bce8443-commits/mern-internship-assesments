@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses | SkillForge Academy</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+        color: white;
+      }
+
+      /* Navbar */
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #38bdf8;
+      }
+
+      .logo::before {
+        content: "🎓 ";
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: #38bdf8;
+      }
+
+      /* Main Section */
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 60px 30px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 50px;
+
+        background: linear-gradient(to right, #38bdf8, #8b5cf6, #ec4899);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Course Cards */
+
+      .courses-layout {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .course-block {
+        width: 450px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(20px);
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        border-radius: 25px;
+        padding: 30px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+        transition: 0.4s;
+      }
+
+      .course-block:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(56, 189, 248, 0.3);
+      }
+
+      .course-block h2 {
+        color: #38bdf8;
+        margin-bottom: 25px;
+        font-size: 1.5rem;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 15px;
+      }
+
+      .course-block ul,
+      .course-block ol {
+        padding-left: 25px;
+      }
+
+      .course-block li {
+        margin-bottom: 18px;
+        font-size: 1.1rem;
+        color: #e2e8f0;
+        transition: 0.3s;
+      }
+
+      .course-block li:hover {
+        color: #38bdf8;
+        transform: translateX(8px);
+      }
+
+      /* Icons */
+
+      .web::before {
+        content: "🌐 ";
+      }
+
+      .programming::before {
+        content: "💻 ";
+      }
+
+      /* Responsive */
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          gap: 15px;
+          padding: 20px;
+        }
+
+        .nav-links {
+          gap: 15px;
+        }
+
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .course-block {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">SkillForge Academy</div>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#" class="active">Courses</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Explore Our Courses</h1>
+
+      <div class="courses-layout">
+        <div class="course-block">
+          <h2 class="web">Web Development</h2>
+
+          <ul>
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript ES6+</li>
+            <li>React JS</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+
+        <div class="course-block">
+          <h2 class="programming">Programming Languages</h2>
+
+          <ol>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>C Programming</li>
+            <li>Data Structures & Algorithms</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

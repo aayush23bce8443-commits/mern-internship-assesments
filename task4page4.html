@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+        color: white;
+      }
+
+      /* Navbar */
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px;
+
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(15px);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #38bdf8;
+      }
+
+      .logo::before {
+        content: "🎓 ";
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: #38bdf8;
+      }
+
+      /* Main Section */
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 20px;
+      }
+
+      .form-card {
+        width: 650px;
+        max-width: 100%;
+
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(20px);
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        border-radius: 25px;
+        padding: 40px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 35px;
+        font-size: 2.8rem;
+
+        background: linear-gradient(to right, #38bdf8, #8b5cf6, #ec4899);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .form-row {
+        margin-bottom: 20px;
+      }
+
+      .form-row label {
+        display: block;
+        margin-bottom: 8px;
+        color: #cbd5e1;
+        font-weight: 500;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 14px;
+
+        border: none;
+        border-radius: 12px;
+
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+
+        outline: none;
+        font-size: 15px;
+
+        transition: 0.3s;
+      }
+
+      .form-input:focus {
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+      }
+
+      .form-input::placeholder {
+        color: #cbd5e1;
+      }
+
+      select.form-input {
+        cursor: pointer;
+      }
+
+      select.form-input option {
+        background: #1e293b;
+        color: white;
+      }
+
+      /* Gender */
+
+      .gender-options {
+        display: flex;
+        gap: 25px;
+        margin-top: 10px;
+      }
+
+      .gender-options label {
+        color: #e2e8f0;
+        cursor: pointer;
+      }
+
+      .gender-options input {
+        accent-color: #38bdf8;
+      }
+
+      /* Button */
+
+      .submit-btn {
+        width: 100%;
+        margin-top: 15px;
+
+        padding: 15px;
+
+        border: none;
+        border-radius: 30px;
+
+        background: linear-gradient(to right, #38bdf8, #8b5cf6);
+
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+      }
+
+      /* Responsive */
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          gap: 15px;
+          padding: 20px;
+        }
+
+        .nav-links {
+          gap: 15px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .form-card {
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">SkillForge Academy</div>
+
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="#" class="active">Register</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="form-card">
+        <h1>Student Registration</h1>
+
+        <form
+          onsubmit="
+            event.preventDefault();
+            alert('Registration Successful!');
+          "
+        >
+          <div class="form-row">
+            <label>Name</label>
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-input"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              class="form-input"
+              placeholder="Enter phone number"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label>Select Course</label>
+            <select class="form-input">
+              <option>HTML & CSS</option>
+              <option>Java</option>
+              <option>React JS</option>
+              <option>Python</option>
+              <option>Node.js</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>Gender</label>
+
+            <div class="gender-options">
+              <label><input type="radio" name="gender" checked /> Male</label>
+              <label><input type="radio" name="gender" /> Female</label>
+              <label><input type="radio" name="gender" /> Other</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Message</label>
+            <textarea
+              class="form-input"
+              rows="5"
+              placeholder="Write your message here..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Register Now 🚀</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
