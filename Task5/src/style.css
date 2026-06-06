@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Page */
+
+body {
+  background: #f1f5f9;
+}
+
+/* Navbar */
+
+.navbar {
+  background: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo h2 {
+  color: #f97316;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #60a5fa;
+}
+
+/* Center Form */
+
+.signup-container {
+  min-height: calc(100vh - 140px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+
+.signup-form {
+  width: 380px;
+
+  background: white;
+  padding: 35px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Heading */
+
+.signup-form h2 {
+  text-align: center;
+  color: #ea580c;
+  margin-bottom: 8px;
+  font-size: 36px;
+}
+
+.signup-form p {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Button */
+
+button {
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #ea580c;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #c2410c;
+}
+
+/* Footer */
+
+.footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
